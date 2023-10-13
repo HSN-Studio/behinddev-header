@@ -2,6 +2,12 @@ window.addEventListener("load", function () {
   addRequiredClasses();
 });
 
+// Real Time View Port Width Changes
+
+window.addEventListener("resize", () => {
+  addRequiredClasses();
+});
+
 function addRequiredClasses() {
   if (window.innerWidth < 860) {
     document.body.classList.add("mobile");
@@ -18,7 +24,7 @@ let bars = document.querySelectorAll(".hamberger span");
 
 let isActive = false;
 
-hamberger.addEventListener("click", function () {
+hamberger.addEventListener("click", () => {
   mobileNav.classList.toggle("open");
 
   if (!isActive) {

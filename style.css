@@ -1,11 +1,13 @@
 /* Menu styling */
-
+nav {
+  max-width: 100vw;
+}
 .menu-container {
-  width: 1152px;
-
-  max-width: 90%;
+  width: 100%;
 
   margin: 0 auto;
+
+  padding: 1rem 2rem;
 }
 
 .nav-wrapper {
@@ -14,6 +16,7 @@
   align-items: center;
 
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .nav-wrapper ul.nav-list {
@@ -95,15 +98,7 @@ nav ul.dropdown-list {
   color: var(--fourth-color);
 }
 
-.nav-wrapper .nav-list li .btn:hover a {
-  color: var(--third-color);
-}
-
 /* Responsive menu */
-
-.hamberger {
-  display: none;
-}
 
 .mobile .hamberger {
   display: flex;
@@ -134,7 +129,7 @@ nav ul.dropdown-list {
 
   left: 0;
 
-  top: 0;
+  top: 100px;
 
   width: 100%;
 
@@ -144,7 +139,7 @@ nav ul.dropdown-list {
 
   flex-direction: column;
 
-  padding-top: 80px;
+  padding-top: 20px;
 
   opacity: 0;
 
@@ -185,4 +180,33 @@ nav ul.dropdown-list {
 
 .mobile .nav-wrapper ul.dropdown-list li a:hover {
   color: var(--third-color);
+}
+
+/* Additional Styles added by Hassan Rafique  */
+/* CSS Reset  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --third-color: #0c3a54;
+  --fourth-color: #fff;
+}
+.brand img {
+  min-width: 70px;
+  max-width: 10vw;
+  height: auto;
+}
+.open {
+  opacity: 1 !important;
+}
+.btn {
+  all: unset;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+.btn-blue {
+  background-color: var(--third-color);
+  color: white;
 }
